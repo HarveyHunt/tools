@@ -4,32 +4,31 @@ from bottle import get, post, run, request
 import os
 html = """
 <html>
-<body>
-<form method="post">
-<div class="row">
-    <label for="txtarea_Jinja2Template" id="Jinja2Template-ariaLabel">Jinja2 Template</label>
-    <textarea id="txtarea_Jinja2Template" name="txtarea_Jinja2Template" cols="120" rows="20" aria-labelledby="Jinja2Template-ariaLabel">{0}</textarea>
-</div>
-<div class="row">
-    <label for="txt_Jinja2JSONData" id="Jinja2JSONData-ariaLabel">Jinja2 JSON Data</label>
-    <input id="txt_Jinja2JSONData" name="txt_Jinja2JSONData" type="text" size=120" aria-labelledby="Jinja2JSONData-ariaLabel" value="{1}" />
-</div>
-<div class="row">
-    <label for="txt_Jinja2JSONFile" id="Jinja2JSONData-ariaLabel">Jinja2 JSON File</label>
-    <input id="txt_Jinja2JSONFile" name="txt_Jinja2JSONFile" type="text" size=120" aria-labelledby="Jinja2JSONFile-ariaLabel" value="{2}" />
-</div>
-<div class="row">
-    <label for="txtarea_Result" id="Result-ariaLabel">Result</label>
-    <textarea id="txtarea_Result" name="txtarea_Result" cols="120" rows="20" aria-labelledby="Result-ariaLabel">{3}</textarea>
-</div>
-<div class="row">
-<input type="submit" value="Submit" />
-</div>
-</form>
+    <body style="background:#41383C;">
+        <form method="post">
+            <div class="row">
+                <label for="txtarea_Jinja2Template" id="Jinja2Template-ariaLabel" style="color:white">Jinja2 Template</label>
+                <textarea id="txtarea_Jinja2Template" name="txtarea_Jinja2Template" cols="120" rows="20" aria-labelledby="Jinja2Template-ariaLabel" style="background:black;color:white">{0}</textarea>
+            </div>
+            <div class="row">
+                <label for="txt_Jinja2JSONData" id="Jinja2JSONData-ariaLabel" style="color:white">Jinja2 JSON Data</label>
+                <input id="txt_Jinja2JSONData" name="txt_Jinja2JSONData" type="text" size=120" aria-labelledby="Jinja2JSONData-ariaLabel" value="{1}" style="background:black;color:white"/>
+            </div>
+            <div class="row">
+                <label for="txt_Jinja2JSONFile" id="Jinja2JSONData-ariaLabel" style="color:white">Jinja2 JSON File</label>
+                <input id="txt_Jinja2JSONFile" name="txt_Jinja2JSONFile" type="text" size=120" aria-labelledby="Jinja2JSONFile-ariaLabel" value="{2}" style="background:black;color:white"/>
+            </div>
+            <div class="row">
+                <label for="txtarea_Result" id="Result-ariaLabel" style="color:white">Result</label>
+                <textarea id="txtarea_Result" name="txtarea_Result" cols="120" rows="20" aria-labelledby="Result-ariaLabel" style="background:black;color:white">{3}</textarea>
+            </div>
+            <div class="row">
+                <input type="submit" value="Submit" />
+            </div>
+        </form>
+    </body>
 </html>
-</body>
 """
-
 
 @get('/')
 def index():
